@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{proc}
+
+\onecolumn
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Use Helvet font globally
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Set distance between two lines
+\usepackage{setspace}
+\onehalfspacing
+
+% Indent the first line of a paragraph
+\usepackage{indentfirst}
+
+% Set margins
+\usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=25mm,bmargin=25mm,lmargin=30mm,rmargin=30mm}
+
+% Print the page number on the center head
+\usepackage{scrpage2} 
+\clearscrheadfoot 
+\chead{- \pagemark -} 
+\pagestyle{scrheadings} 
+
+
+% Start document
+
+\begin{document}
+
+\include{./Deckblatt}
+
+\include{./Inhaltsverzeichnis}
+
+\end{document}
