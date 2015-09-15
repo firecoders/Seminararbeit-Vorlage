@@ -16,8 +16,8 @@ A template for our seminar paper (german)
 \seminar{Seminarsthema}
 \supervisor{Kursleiter}
 \deadline{01.01.1970}
-\genderAppendixAuthor{} % Append an syllable to 'Verfasser', e.g. 'in'
-\genderAppendixSupervisor{} % Append an syllable to 'Kurleiter', e.g. 'in'
+\genderAuthor{f} % Set to 'm' (male) or 'f' (female)
+\genderSupervisor{m} % Set to 'm' (male) or 'f' (female)
 \maketitle
 
 \end{document}

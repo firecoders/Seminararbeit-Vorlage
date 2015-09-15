@@ -1,5 +1,7 @@
 \ProvidesPackage{seminararbeit-vorlage}
 
+\usepackage{ifthen}
+
 \makeatletter
 
 \def\school#1{\def\@school{#1}}
@@ -9,13 +11,12 @@
 \def\supervisor#1{\def\@supervisor{#1}}
 \def\deadline#1{\def\@deadline{#1}}
 
-\def\genderAppendixAuthor#1{\def\@genderAppendixAuthor{#1}}
-\def\genderAppendixSupervisor#1{\def\@genderAppendixSupervisor{#1}}
+\def\genderAuthor#1{\def\@genderAuthor{#1}}
+\def\genderSupervisor#1{\def\@genderSupervisor{#1}}
 
 \def\maketitle{
 
 \thispagestyle{empty}
-
 
 \newcommand{\ninedots}{\ldots\ldots\ldots}
 
@@ -38,9 +39,9 @@
 \leftskip0em
 
 \begin{tabular}{ll}
-\textsc{\Large Verfasser\@genderAppendixAuthor:} & \textsc{\Large \@author}\\[0.25cm]
+\textsc{\Large \ifthenelse{\equal{f}{\@genderAuthor}}{Verfasserin}{\ifthenelse{\equal{m}{\@genderAuthor}}{Verfasser}{}}:} & \textsc{\Large \@author}\\[0.25cm]
 \textsc{\Large Seminar:} & \textsc{\Large \@seminar}\\[0.25cm]
-\textsc{\Large Kursleiter\@genderAppendixSupervisor:} & \textsc{\Large \@supervisor}\\[0.25cm]
+\textsc{\Large \ifthenelse{\equal{f}{\@genderSupervisor}}{Kursleiterin}{\ifthenelse{\equal{m}{\@genderSupervisor}}{Kursleiter}{}}:} & \textsc{\Large \@supervisor}\\[0.25cm]
 \textsc{\Large Abgabetermin:} & \textsc{\Large \@deadline}\\[2cm]
 \end{tabular}
 
@@ -53,7 +54,7 @@
 \textsc{\Large Abgabe beim Oberstufenkoordinator am \dotfill}\\[2cm]
 
 \textsc{\Large \dotfill}\\
-\textsc{[Unterschrift der Kursleiter\@genderAppendixSupervisor]}
+\textsc{[\ifthenelse{\equal{f}{\@genderSupervisor}}{Unterschrift der Kursleiterin}{\ifthenelse{\equal{m}{\@genderSupervisor}}{Unterschrift des Kursleiters}{}}]}
 
 \end{flushleft}
 }
