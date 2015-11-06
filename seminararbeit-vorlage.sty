@@ -22,39 +22,39 @@
 
 \begin{center}
 
-\textsc{\LARGE \@school}\\[0.5cm]
-\textsc{\Large Oberstufenjahrgang \@year}\\[2cm]
+\LARGE{\@school}\\[0.25cm]
+\Large{Oberstufenjahrgang \@year}\\[1.5cm]
 
-\textsc{\LARGE SEMINARARBEIT}\\[0.25cm]
-\textsc{\Large im Fach}\\[0.25cm]
-\textsc{\LARGE \@subject}\\[2cm]
+\LARGE{SEMINARARBEIT}\\
+\Large{im Fach}\\
+\LARGE{\@subject}\\[1.5cm]
 
 \end{center}
 
 \begin{flushleft}
 
-\textsc{\Large Thema:}
-\begin{center} \begin{doublespace}
-\textsc{\Large \@title}\\[1cm]
-\end{doublespace} \end{center}
+\Large{Thema:}\\
+\leftskip1em
+\Large{\@title}\\[1.5cm]
+\leftskip0em
 
 \begin{tabular}{ll}
-\textsc{\Large \ifthenelse{\equal{f}{\@genderAuthor}}{Verfasserin}{\ifthenelse{\equal{m}{\@genderAuthor}}{Verfasser}{}}:} & \textsc{\Large \@author}\\[0.25cm]
-\textsc{\Large Seminar:} & \textsc{\Large \@seminar}\\[0.25cm]
-\textsc{\Large \ifthenelse{\equal{f}{\@genderSupervisor}}{Kursleiterin}{\ifthenelse{\equal{m}{\@genderSupervisor}}{Kursleiter}{}}:} & \textsc{\Large \@supervisor}\\[0.25cm]
-\textsc{\Large Abgabetermin:} & \textsc{\Large \@deadline}\\[2cm]
+\Large{\ifthenelse{\equal{f}{\@genderAuthor}}{Verfasserin}{\ifthenelse{\equal{m}{\@genderAuthor}}{Verfasser}{}}:} & \Large{\@author}\\
+\Large{Seminar:} & \Large{\@seminar}\\
+\Large{\ifthenelse{\equal{f}{\@genderSupervisor}}{Kursleiterin}{\ifthenelse{\equal{m}{\@genderSupervisor}}{Kursleiter}{}}:} & \Large{\@supervisor}\\
+\Large{Abgabetermin:} & \Large{\@deadline}\\[2cm]
 \end{tabular}
 
 \begin{tabular}{lll}
-\textsc{\Large Punkte in der schriftlichen Arbeit:} & \ninedots~x 3 = & \ninedots \\[0.25cm]
-\textsc{\Large Punkte in der Präsentation:} & & \ninedots \\[0.25cm]
-\textsc{\Large Gesamtpunktzahl:} & & \ninedots \\[2cm]
+\Large{Punkte in der schriftlichen Arbeit:} & \ninedots~x 3 = & \ninedots \\[0.25cm]
+\Large{Punkte in der Präsentation:} & & \ninedots \\[0.25cm]
+\Large{Gesamtpunktzahl:} & & \ninedots \\[2cm]
 \end{tabular}
 
-\textsc{\Large Abgabe beim Oberstufenkoordinator am \dotfill}\\[1.5cm]
+\Large{Abgabe beim Oberstufenkoordinator am \dotfill}\\[1.5cm]
 
-\textsc{\Large \dotfill}\\
-\textsc{[\ifthenelse{\equal{f}{\@genderSupervisor}}{Unterschrift der Kursleiterin}{\ifthenelse{\equal{m}{\@genderSupervisor}}{Unterschrift des Kursleiters}{}}]}
+\Large{\dotfill}\\
+\normalsize{\ifthenelse{\equal{f}{\@genderSupervisor}}{[Unterschrift der Kursleiterin]}{\ifthenelse{\equal{m}{\@genderSupervisor}}{[Unterschrift des Kursleiters]}{}}}
 
 \end{flushleft}
 }
