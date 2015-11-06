@@ -20,5 +20,9 @@ A template for our seminar paper (german)
 \genderSupervisor{m} % Set to 'm' (male) or 'f' (female)
 \maketitle
 
+% Your Work here
+
+\lastpage
+
 \end{document}
 ```
